@@ -10,6 +10,15 @@
  */
 const config = {
   extends: ['./.eslintrc.base.cjs'],
+  overrides: [
+    ...require('./.eslintrc.base.cjs').overrides,
+    {
+      files: ['src/types/token-kind.ts'],
+      rules: {
+        '@typescript-eslint/no-redundant-type-constituents': 0
+      }
+    }
+  ],
   root: true
 }
 

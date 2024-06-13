@@ -3,4 +3,5 @@
  * @module unist-util-parsec
  */
 
-export {}
+export type * from './interfaces'
+export type * from './types'
