@@ -10,5 +10,6 @@
   },
   "exclude": [],
   "extends": "./tsconfig.json",
+  "files": ["typings/@flex-development/unist-util-parsec/index.d.mts"],
   "include": ["./dist/*"]
 }

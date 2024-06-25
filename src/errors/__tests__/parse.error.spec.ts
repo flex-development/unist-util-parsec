@@ -16,7 +16,7 @@ describe('unit:errors/ParseError', () => {
 
   beforeAll(() => {
     point = { column: 1, line: 1, offset: 0 }
-    token = { end: point, start: point, type: <never>tt.eof, value: null }
+    token = { end: point, start: point, type: tt.eof, value: null }
     subject = new TestSubject(token, reason = 'Unexpected token')
   })
 

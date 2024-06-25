@@ -9,7 +9,8 @@
  * @enum {Lowercase<string>}
  */
 enum tt {
-  eof = 'eof'
+  eof = 'eof',
+  number = 'number'
 }
 
 export default tt
