@@ -5,5 +5,6 @@ declare module '#src/interfaces' {
   interface TokenTypeMap {
     eof: tt.eof
     number: tt.number
+    punctuator: tt.punctuator
   }
 }

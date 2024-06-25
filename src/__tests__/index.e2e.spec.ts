@@ -12,7 +12,10 @@ describe('e2e:unist-util-parsec', () => {
       'fail',
       'nil',
       'nok',
-      'succ'
+      'out',
+      'succ',
+      'tok',
+      'val'
     ])
   })
 })

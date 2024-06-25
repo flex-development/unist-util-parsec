@@ -1849,6 +1849,7 @@ __metadata:
     "@flex-development/pathe": "npm:2.0.0"
     "@flex-development/tutils": "npm:6.0.0-alpha.25"
     "@flex-development/unist-util-types": "npm:1.6.1"
+    "@flex-development/vfile-lexer": "flex-development/vfile-lexer#commit=a4837a7d1a9c63036ed522c0e844cd7c0ed78428"
     "@stylistic/eslint-plugin": "npm:2.2.2"
     "@types/chai": "npm:4.3.16"
     "@types/eslint": "npm:8.56.10"
@@ -1906,12 +1907,59 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@flex-development/unist-util-types@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@flex-development/unist-util-types@npm:1.4.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-types%2F1.4.0%2F7bc3e76774ee0ff16f31bf3ca7caaec923795e07"
+  peerDependencies:
+    "@types/unist": ">=3.0.2"
+  checksum: 10/90f20be4a9617e5483b0ab9e8837022b78c5bd6dc12b65b30c1e7a10798f45fca4367716deeb666a9ec09d9321b8d51393be7f3bf9535ec2794a22dc9c6fd4f8
+  languageName: node
+  linkType: hard
+
 "@flex-development/unist-util-types@npm:1.6.1":
   version: 1.6.1
   resolution: "@flex-development/unist-util-types@npm:1.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-types%2F1.6.1%2F0deabf0a30d32dc9ae23aea394ef67b8f0b806b9"
   dependencies:
     "@types/unist": "npm:3.0.2"
   checksum: 10/fd308bb9673987b588d54afc56821fefaad9233fecf8d76f352a055c339716979f3c2e1b2d145628ffa0d9ac033fbe28d942294a029d98b52334dd9703471f99
+  languageName: node
+  linkType: hard
+
+"@flex-development/vfile-lexer@flex-development/vfile-lexer#commit=a4837a7d1a9c63036ed522c0e844cd7c0ed78428":
+  version: 0.0.0
+  resolution: "@flex-development/vfile-lexer@https://github.com/flex-development/vfile-lexer.git#commit=a4837a7d1a9c63036ed522c0e844cd7c0ed78428"
+  dependencies:
+    "@flex-development/unist-util-types": "npm:1.6.1"
+    "@flex-development/vfile-reader": "npm:3.1.1"
+    "@types/debug": "npm:4.1.12"
+    "@types/unist": "npm:3.0.2"
+    debug: "npm:4.3.5"
+    devlop: "npm:1.1.0"
+    micromark-util-chunked: "npm:2.0.0"
+    vfile: "npm:6.0.1"
+  checksum: 10/5507bad58125dc73394968464475eb20fab583ec9fe1b7393f007381045c4cb4d62905a3b22e0f3c0261fd1c18b1b51fd18c3b7deb280f31ed97c1698d23823a
+  languageName: node
+  linkType: hard
+
+"@flex-development/vfile-location@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@flex-development/vfile-location@npm:1.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fvfile-location%2F1.0.1%2F79df979602163f1ede1c29e00ad0ebec00c8e658"
+  dependencies:
+    "@flex-development/unist-util-types": "npm:1.4.0"
+    "@types/unist": "npm:3.0.2"
+    vfile: "npm:6.0.1"
+  checksum: 10/2deaf57809d7fb58e4432bc1cb576ef651596e42eb99bbd41de7312ec7b453d678d91d6b3cc5cca6111d0dbb690aa0950a5e2d09a83511a8e33579c2a6d43465
+  languageName: node
+  linkType: hard
+
+"@flex-development/vfile-reader@npm:3.1.1":
+  version: 3.1.1
+  resolution: "@flex-development/vfile-reader@npm:3.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fvfile-reader%2F3.1.1%2F519964c1191c4558eaf8c4a12cf6a0ef9dbfd06c"
+  dependencies:
+    "@flex-development/unist-util-types": "npm:1.6.1"
+    "@flex-development/vfile-location": "npm:1.0.1"
+    vfile: "npm:6.0.1"
+  checksum: 10/53ab732e8db1481bfc0d1821e2faaacfc2331a8eb0fc0ce0b93ed779fd21221d93ebd97204a550bc11886cc3dc9a122ff11235a59947ae9092858aea31fbddcd
   languageName: node
   linkType: hard
 
@@ -2441,7 +2489,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/debug@npm:^4.0.0":
+"@types/debug@npm:4.1.12, @types/debug@npm:^4.0.0":
   version: 4.1.12
   resolution: "@types/debug@npm:4.1.12"
   dependencies:
@@ -4065,7 +4113,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4, debug@npm:^4.3.5, debug@npm:~4.3.4":
+"debug@npm:4, debug@npm:4.3.5, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4, debug@npm:^4.3.5, debug@npm:~4.3.4":
   version: 4.3.5
   resolution: "debug@npm:4.3.5"
   dependencies:
@@ -4175,7 +4223,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devlop@npm:^1.0.0, devlop@npm:^1.1.0":
+"devlop@npm:1.1.0, devlop@npm:^1.0.0, devlop@npm:^1.1.0":
   version: 1.1.0
   resolution: "devlop@npm:1.1.0"
   dependencies:
@@ -7628,7 +7676,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromark-util-chunked@npm:^2.0.0":
+"micromark-util-chunked@npm:2.0.0, micromark-util-chunked@npm:^2.0.0":
   version: 2.0.0
   resolution: "micromark-util-chunked@npm:2.0.0"
   dependencies:
@@ -10460,7 +10508,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vfile@npm:^6.0.0, vfile@npm:^6.0.1":
+"vfile@npm:6.0.1, vfile@npm:^6.0.0, vfile@npm:^6.0.1":
   version: 6.0.1
   resolution: "vfile@npm:6.0.1"
   dependencies:

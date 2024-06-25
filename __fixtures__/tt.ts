@@ -10,7 +10,8 @@
  */
 enum tt {
   eof = 'eof',
-  number = 'number'
+  number = 'number',
+  punctuator = 'punctuator'
 }
 
 export default tt
