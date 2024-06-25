@@ -21,11 +21,5 @@ export default [
       '**/dist/',
       '__fixtures__/underscore-1.5.2.js'
     ]
-  },
-  {
-    files: ['src/types/token-kind.ts'],
-    rules: {
-      '@typescript-eslint/no-redundant-type-constituents': 0
-    }
   }
 ]

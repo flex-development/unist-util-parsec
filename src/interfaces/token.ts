@@ -3,49 +3,47 @@
  * @module unist-util-parsec/interfaces/Token
  */
 
-import type { TokenKind, TokenValue } from '#src/types'
-import type Point from './point'
+import type { TokenType, TokenValue } from '#src/types'
+import type Position from './position'
 
 /**
- * Parser combinator-compatible token.
+ * A span of one (`1`) or more characters.
  *
- * This interface can be augmented to register custom token fields.
+ * Tokens are essentially names attached to a slice of characters, such as `eof`
+ * for end of file, or `whitespace` for whitespace characters.
+ *
+ * Sometimes tokens need more info. This interface can be augmented to register
+ * custom token fields.
  *
  * @example
  *  declare module '@flex-development/unist-util-parsec' {
  *    interface Token {
- *      data?: Record<string, string> | undefined
+ *      whitespace?: string | undefined
  *    }
  *  }
  *
- * @see {@linkcode TokenKind}
+ * @see {@linkcode Position}
+ * @see {@linkcode TokenType}
  *
- * @template {TokenKind} [K=TokenKind] - Token kind
+ * @template {TokenType} [T=TokenType] - Token type
+ *
+ * @extends {Position}
  */
-interface Token<K extends TokenKind = TokenKind> {
+interface Token<T extends TokenType = TokenType> extends Position {
   /**
-   * Point where token ends.
-   *
-   * @see {@linkcode Point}
+   * Next token in linked token list.
    */
-  end: Point
+  next?: Token | undefined
 
   /**
-   * Token kind.
+   * Previous token in linked token list.
    */
-  readonly kind: K
+  previous?: Token | undefined
 
   /**
-   * Next token.
+   * Token type.
    */
-  next: Token | undefined
-
-  /**
-   * Point where token starts.
-   *
-   * @see {@linkcode Point}
-   */
-  start: Point
+  type: T
 
   /**
    * Token value.

@@ -3,31 +3,31 @@
  * @module unist-util-parsec/interfaces/tests/unit-d/Token
  */
 
-import type { TokenKind, TokenValue } from '#src/types'
-import type { ReadonlyKeys } from '@flex-development/tutils'
-import type Point from '../point'
+import type { TokenType, TokenValue } from '#src/types'
+import type Position from '../position'
 import type TestSubject from '../token'
 
 describe('unit-d:interfaces/Token', () => {
-  it('should match [end: Point]', () => {
-    expectTypeOf<TestSubject>().toHaveProperty('end').toEqualTypeOf<Point>()
+  it('should extend Position', () => {
+    expectTypeOf<TestSubject>().toMatchTypeOf<Position>()
   })
 
-  it('should match [readonly kind: K]', () => {
-    expectTypeOf<ReadonlyKeys<TestSubject>>().extract<'kind'>().not.toBeNever()
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('kind')
-      .toEqualTypeOf<TokenKind>()
-  })
-
-  it('should match [next: Token | undefined]', () => {
+  it('should match [next?: Token | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('next')
       .toEqualTypeOf<TestSubject | undefined>()
   })
 
-  it('should match [start: Point]', () => {
-    expectTypeOf<TestSubject>().toHaveProperty('start').toEqualTypeOf<Point>()
+  it('should match [previous?: Token | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('previous')
+      .toEqualTypeOf<TestSubject | undefined>()
+  })
+
+  it('should match [type: T]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('type')
+      .toEqualTypeOf<TokenType>()
   })
 
   it('should match [value: TokenValue]', () => {

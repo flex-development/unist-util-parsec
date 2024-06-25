@@ -3,13 +3,9 @@
  * @module unist-util-parsec/types/TokenValue
  */
 
-import type { TokenValueMap } from '#src/interfaces'
-
 /**
- * Union of registered token values.
- *
- * @see {@linkcode TokenValueMap}
+ * Union of token values.
  */
-type TokenValue = TokenValueMap[keyof TokenValueMap]
+type TokenValue = string | null
 
 export type { TokenValue as default }

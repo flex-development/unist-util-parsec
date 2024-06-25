@@ -4,6 +4,7 @@
     "!**/__fixtures__/**/dist/",
     "!**/__fixtures__/**/node_modules/",
     "!**/typings/**/dist/",
+    "!scratch.ts",
     "**/*.patch",
     "**/*.snap",
     "**/*config.*.timestamp*",
