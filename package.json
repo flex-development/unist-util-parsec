@@ -72,7 +72,8 @@
   },
   "dependencies": {
     "@flex-development/unist-util-types": "1.6.1",
-    "@types/unist": "3.0.2"
+    "@types/unist": "3.0.2",
+    "devlop": "1.1.0"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.15.3",

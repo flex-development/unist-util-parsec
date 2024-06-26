@@ -17,11 +17,11 @@ import type ParseCandidate from './parse-candidate'
  */
 interface SucceededParserOutput<T extends TokenType = TokenType, R = any> {
   /**
-   * Parse candidates.
+   * Parse candidate.
    *
    * @see {@linkcode ParseCandidate}
    */
-  candidates: ParseCandidate<T, R>[]
+  candidate: ParseCandidate<T, R>
 
   /**
    * Parse error.

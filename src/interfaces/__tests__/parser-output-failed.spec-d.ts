@@ -10,10 +10,10 @@ import type ParseCandidate from '../parse-candidate'
 import type TestSubject from '../parser-output-failed'
 
 describe('unit-d:interfaces/FailedParserOutput', () => {
-  it('should match [candidates?: [] | ParseCandidate<T, never>[] | null | undefined]', () => {
+  it('should match [candidate?: ParseCandidate<T, never> | null | undefined]', () => {
     expectTypeOf<TestSubject>()
-      .toHaveProperty('candidates')
-      .toEqualTypeOf<Nilable<[] | ParseCandidate<TokenType, never>[]>>()
+      .toHaveProperty('candidate')
+      .toEqualTypeOf<Nilable<ParseCandidate<TokenType, never>>>()
   })
 
   it('should match [error: ParseError<T>]', () => {

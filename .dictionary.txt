@@ -5,6 +5,7 @@ commitlintrc
 dedupe
 deno
 dessant
+devlop
 docast
 dohm
 dprint

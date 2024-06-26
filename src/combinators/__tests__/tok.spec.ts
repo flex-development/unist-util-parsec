@@ -4,7 +4,9 @@
  */
 
 import tt from '#fixtures/tt'
+import { ParseError } from '#src/errors'
 import type { ParseCandidate, Parser, Point, Token } from '#src/interfaces'
+import { isParseCandidate } from '#tests/utils'
 import { chars } from '@flex-development/vfile-lexer'
 import testSubject from '../tok'
 
@@ -30,8 +32,13 @@ describe('unit:combinators/tok', () => {
         value: chars.digit0
       }
 
-      // Act + Expect
-      expect(subject.parse(token)).to.have.property('successful').be.false
+      // Act
+      const output = subject.parse(token)
+
+      // Expect
+      expect(output.successful).to.be.false
+      expect(output.error).to.be.instanceof(ParseError)
+      expect(output.error).to.have.property('cause', token)
     })
 
     it('should succeed on token type match', () => {
@@ -47,11 +54,11 @@ describe('unit:combinators/tok', () => {
       const output = subject.parse(token)
 
       // Expect
-      expect(output).to.have.property('successful').be.true
-      expect(output.candidates).to.be.an('array').of.length(1)
-      expect(output.candidates).to.each.satisfy((candidate: ParseCandidate) => {
+      expect(output.successful).to.be.true
+      expect(output.candidate).to.satisfy(isParseCandidate)
+      expect(output.candidate).to.satisfy((candidate: ParseCandidate) => {
         return (
-          token === candidate.head &&
+          candidate.head === token &&
           candidate.next === token.next &&
           candidate.result === token
         )

@@ -14,7 +14,7 @@ import { nok, out } from '#src/utils'
 /**
  * Consume a token of the specified `type`.
  *
- * Fails if a token cannot be consumed.
+ * Fails if the current token could not be consumed.
  *
  * @see {@linkcode Parser}
  * @see {@linkcode TokenType}
@@ -36,18 +36,18 @@ function tok<T extends TokenType>(type: T): Parser<T, Token<T>> {
    */
   function parse(token?: Token<T>): ParserOutput<T, Token<T>> {
     /**
-     * Parse candidates.
+     * Parse candidate.
      *
-     * @const {ParseCandidate<T, Token<T>>[]} candidates
+     * @var {ParseCandidate<T, Token<T>> | null} candidate
      */
-    const candidates: ParseCandidate<T, Token<T>>[] = []
+    let candidate: ParseCandidate<T, Token<T>> | null = null
 
     // check token type
     if (token && token.type === type) {
-      candidates.push({ head: token, next: token.next, result: token })
+      candidate = { head: token, next: token.next, result: token }
     }
 
-    return out(candidates, candidates.length > 0, nok(token))
+    return out(candidate !== null, candidate, nok(token))
   }
 }
 

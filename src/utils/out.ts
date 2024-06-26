@@ -4,12 +4,9 @@
  */
 
 import type { ParseError } from '#src/errors'
-import type {
-  ParseCandidate,
-  SucceededParserOutput,
-  Token
-} from '#src/interfaces'
+import type { ParseCandidate } from '#src/interfaces'
 import type { ParserOutput, TokenType } from '#src/types'
+import { ok } from 'devlop'
 
 /**
  * Create a parser output object.
@@ -18,36 +15,41 @@ import type { ParserOutput, TokenType } from '#src/types'
  * @see {@linkcode ParseError}
  * @see {@linkcode ParserOutput}
  * @see {@linkcode TokenType}
- * @see {@linkcode Token}
  *
  * @template {TokenType} T - Token type
- * @template {any} R - Parse candidate result
+ * @template {any} Result - Parse candidate result
+ * @template {ParserOutput<T, R>} [Output=ParserOutput<T,R>] - Parser output
  *
- * @param {ParseCandidate<T, R>[] | null | undefined} candidates - List of parse
- * candidates, only used if `successful` is `true`
  * @param {boolean} successful - Boolean indicating parser success
+ * @param {(ParseCandidate<T, Result>| null)?} [candidate] - Parse candidate,
+ * only used if `successful` is `true`
  * @param {(ParseError | null)?} [error] - Parse error
- * @return {ParserOutput<T, R>} Parser output
+ * @return {Output} Parser output
  */
-function out<T extends TokenType, R>(
-  candidates: ParseCandidate<T, R>[] | null | undefined,
+function out<
+  T extends TokenType,
+  Result,
+  Output extends ParserOutput<T, Result>
+>(
   successful: boolean,
+  candidate?: ParseCandidate<T, Result> | null,
   error?: ParseError | null
-): ParserOutput<T, R> {
-  if (!(candidates && successful)) return { error: error!, successful: false }
-
+): Output {
   /**
    * Successful parser output.
    *
-   * @const {SucceededParserOutput<T, R>} output
+   * @var {ParserOutput<T, Result>} output
    */
-  const output: SucceededParserOutput<T, R> = {
-    candidates,
-    error,
-    successful: true
+  let output: ParserOutput<T, Result>
+
+  if (candidate && successful) {
+    output = { candidate, error, successful: true }
+  } else {
+    ok(error, 'expected parse error')
+    output = { error, successful: false }
   }
 
-  return !output.error && delete output.error, output
+  return !output.error && delete output.error, <Output>output
 }
 
 export default out

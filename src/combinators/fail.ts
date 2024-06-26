@@ -3,16 +3,14 @@
  * @module unist-util-parsec/combinators/fail
  */
 
-import { ParseError } from '#src/errors'
 import type { FailedParser, FailedParserOutput, Token } from '#src/interfaces'
 import type { TokenType } from '#src/types'
-import { nok } from '#src/utils'
+import { nok, out } from '#src/utils'
 
 /**
  * Fail without consuming a token.
  *
  * @see {@linkcode FailedParser}
- * @see {@linkcode ParseError}
  * @see {@linkcode TokenType}
  *
  * @template {TokenType} T - Token type
@@ -32,7 +30,7 @@ function fail<T extends TokenType>(
    * @return {FailedParserOutput<T>} Failed parser output
    */
   function parse(token?: Token<T>): FailedParserOutput<T> {
-    return { error: nok(token, reason), successful: false }
+    return out(false, null, nok(token, reason))
   }
 }
 

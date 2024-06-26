@@ -26,10 +26,9 @@ describe('unit:combinators/fail', () => {
     })
 
     it('should fail without consuming token', () => {
-      expect(output).to.not.have.property('candidates')
-      expect(output).to.have.property('error').be.instanceof(ParseError)
-      expect(output).to.have.property('error').with.property('cause', token)
-      expect(output).to.have.property('successful').be.false
+      expect(output.successful).to.be.false
+      expect(output.error).to.be.instanceof(ParseError)
+      expect(output.error).to.have.property('cause', token)
     })
   })
 })

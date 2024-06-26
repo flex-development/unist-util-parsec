@@ -10,7 +10,6 @@ describe('e2e:unist-util-parsec', () => {
     expect(testSubject).to.have.keys([
       'ParseError',
       'fail',
-      'nil',
       'nok',
       'out',
       'succ',

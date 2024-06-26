@@ -16,9 +16,9 @@ import type ParseCandidate from './parse-candidate'
  */
 interface FailedParserOutput<T extends TokenType = TokenType> {
   /**
-   * Parse candidates.
+   * Parse candidate.
    */
-  candidates?: [] | ParseCandidate<T, never>[] | null | undefined
+  candidate?: ParseCandidate<T, never> | null | undefined
 
   /**
    * Parse error.

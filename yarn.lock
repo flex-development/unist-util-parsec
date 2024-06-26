@@ -1867,6 +1867,7 @@ __metadata:
     chai-each: "npm:0.0.1"
     cross-env: "npm:7.0.3"
     cspell: "npm:8.9.1"
+    devlop: "npm:1.1.0"
     dprint: "npm:0.46.3"
     editorconfig: "npm:2.0.0"
     esbuild: "npm:0.21.5"

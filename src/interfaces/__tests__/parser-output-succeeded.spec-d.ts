@@ -14,10 +14,10 @@ describe('unit-d:interfaces/SucceededParserOutput', () => {
   type R = unknown
   type Subject = TestSubject<T, R>
 
-  it('should match [candidates: ParseCandidate<T, R>[]]', () => {
+  it('should match [candidate: ParseCandidate<T, R>]', () => {
     expectTypeOf<Subject>()
-      .toHaveProperty('candidates')
-      .toEqualTypeOf<ParseCandidate<T, R>[]>()
+      .toHaveProperty('candidate')
+      .toEqualTypeOf<ParseCandidate<T, R>>()
   })
 
   it('should match [error?: ParseError | null | undefined]', () => {

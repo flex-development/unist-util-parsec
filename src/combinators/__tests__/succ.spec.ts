@@ -10,6 +10,7 @@ import type {
   Token
 } from '#src/interfaces'
 import type { TokenType } from '#src/types'
+import { isParseCandidate } from '#tests/utils'
 import testSubject from '../succ'
 
 describe('unit:combinators/succ', () => {
@@ -32,12 +33,11 @@ describe('unit:combinators/succ', () => {
 
     it('should succeed without consuming token', () => {
       expect(output.successful).to.be.true
-      expect(output.error).to.be.undefined
-      expect(output.candidates).to.be.an('array').of.length(1)
-      expect(output.candidates).to.each.satisfy((candidate: ParseCandidate) => {
+      expect(output.candidate).to.satisfy(isParseCandidate)
+      expect(output.candidate).to.satisfy((candidate: ParseCandidate) => {
         return (
-          token === candidate.head &&
-          candidate.head === candidate.next &&
+          candidate.head === token &&
+          candidate.next === token &&
           candidate.result === result
         )
       })
