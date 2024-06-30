@@ -30,8 +30,10 @@
     "outDir": "dist",
     "paths": {
       "#fixtures/*": ["__fixtures__/*"],
+      "#src": ["src/index"],
       "#src/*": ["src/*"],
-      "#tests/*": ["__tests__/*"]
+      "#tests/*": ["__tests__/*"],
+      "@flex-development/unist-util-parsec": ["src/index"]
     },
     "preserveConstEnums": true,
     "preserveSymlinks": false,

@@ -3,26 +3,38 @@
  * @module unist-util-parsec/errors/tests/unit/ParseError
  */
 
-import tt from '#fixtures/tt'
-import type { Point, Token } from '#src/interfaces'
-import type { TokenValue } from '#src/types'
+import type { Token } from '#src/interfaces'
+import { tt } from '@flex-development/esast-util-from-code'
+import { chars } from '@flex-development/vfile-lexer'
 import TestSubject from '../parse.error'
 
 describe('unit:errors/ParseError', () => {
+  let eof: Token<tt.eof>
   let reason: string
-  let point: Point
+  let sof: Token<tt.sof>
   let subject: TestSubject
-  let token: Token & { value: TokenValue }
 
   beforeAll(() => {
-    point = { column: 1, line: 1, offset: 0 }
-    token = { end: point, start: point, type: tt.eof, value: null }
-    subject = new TestSubject(token, reason = 'Unexpected token')
+    eof = {
+      end: { column: 1, line: 2, offset: 18 },
+      start: { column: 1, line: 2, offset: 18 },
+      type: tt.eof,
+      value: chars.eof
+    }
+
+    sof = {
+      end: { column: 1, line: 1, offset: 0 },
+      start: { column: 1, line: 1, offset: 0 },
+      type: tt.sof,
+      value: chars.eof
+    }
+
+    subject = new TestSubject(eof, reason = 'Unexpected token')
   })
 
   describe('constructor', () => {
     it('should set #cause', () => {
-      expect(subject).to.have.property('cause', token).and.be.frozen
+      expect(subject).to.have.property('cause', eof).and.be.frozen
     })
 
     it('should set #message', () => {
@@ -35,8 +47,8 @@ describe('unit:errors/ParseError', () => {
 
     it('should set #range', () => {
       expect(subject).to.have.property('range').eql({
-        end: point,
-        start: point
+        end: eof.end,
+        start: eof.start
       })
     })
   })

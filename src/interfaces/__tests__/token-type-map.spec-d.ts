@@ -3,7 +3,7 @@
  * @module unist-util-parsec/interfaces/tests/unit-d/TokenTypeMap
  */
 
-import type tt from '#fixtures/tt'
+import type { tt } from '@flex-development/esast-util-from-code'
 import type TestSubject from '../token-type-map'
 
 describe('unit-d:interfaces/TokenTypeMap', () => {

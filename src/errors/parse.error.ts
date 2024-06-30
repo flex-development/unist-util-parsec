@@ -63,10 +63,10 @@ class ParseError<T extends TokenType = TokenType> extends Error {
    *
    * @see {@linkcode Token}
    *
-   * @param {Token<T> | null | undefined} token - The erroneous token
-   * @param {string} reason - Reason for parse error
+   * @param {(Token<T> | null | undefined)?} [token=null] - The erroneous token
+   * @param {string?} [reason=''] - Reason for parse error
    */
-  constructor(token: Token<T> | null | undefined, reason: string) {
+  constructor(token: Token<T> | null | undefined = null, reason: string = '') {
     super()
 
     super.message = reason

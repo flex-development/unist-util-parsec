@@ -3,7 +3,6 @@
  * @module unist-util-parsec/combinators/tests/unit/succ
  */
 
-import tt from '#fixtures/tt'
 import type {
   ParseCandidate,
   SucceededParserOutput,
@@ -11,6 +10,7 @@ import type {
 } from '#src/interfaces'
 import type { TokenType } from '#src/types'
 import { isParseCandidate } from '#tests/utils'
+import { tt } from '@flex-development/esast-util-from-code'
 import testSubject from '../succ'
 
 describe('unit:combinators/succ', () => {

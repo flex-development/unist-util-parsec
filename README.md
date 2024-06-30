@@ -20,6 +20,7 @@ a [unist][unist] flavored parser combinator library
 - [Use](#use)
 - [API](#api)
 - [Types](#types)
+- [Related](#related)
 - [Contribute](#contribute)
 
 ## What is this?
@@ -73,6 +74,11 @@ In browsers with [`esm.sh`][esmsh]:
 
 This package is fully typed with [TypeScript][typescript].
 
+## Related
+
+- [`unist-util-types`][unist-util-types] &mdash; [unist][unist] utility types
+- [`vfile-lexer`][vfile-lexer] &mdash; [vfile][vfile] utility to tokenize a file
+
 ## Contribute
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md).
@@ -83,5 +89,8 @@ community you agree to abide by its terms.
 [esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 [esmsh]: https://esm.sh/
 [typescript]: https://www.typescriptlang.org
+[unist-util-types]: https://github.com/flex-development/unist-util-types
 [unist]: https://github.com/syntax-tree/unist
+[vfile-lexer]: https://github.com/flex-development/vfile-lexer
+[vfile]: https://github.com/vfile/vfile
 [yarn]: https://yarnpkg.com
