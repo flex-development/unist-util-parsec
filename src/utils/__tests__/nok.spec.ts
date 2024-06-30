@@ -3,9 +3,9 @@
  * @module unist-util-parsec/utils/tests/unit/nok
  */
 
-import tt from '#fixtures/tt'
 import { ParseError } from '#src/errors'
 import type { Point, Token } from '#src/interfaces'
+import { tt } from '@flex-development/esast-util-from-code'
 import testSubject from '../nok'
 
 describe('utils:nok', () => {

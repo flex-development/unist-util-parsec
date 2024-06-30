@@ -9,12 +9,14 @@ devlop
 docast
 dohm
 dprint
+esast
 fbca
 ggshield
 gpgsign
 hmarr
 jchen
 kaisugi
+keyid
 lcov
 lintstagedrc
 mkbuild
@@ -28,5 +30,6 @@ shfmt
 succ
 unstub
 vates
+vfile
 vitest
 yarnrc

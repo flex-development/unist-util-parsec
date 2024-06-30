@@ -3,10 +3,10 @@
  * @module unist-util-parsec/combinators/tests/unit/val
  */
 
-import tt from '#fixtures/tt'
 import { ParseError } from '#src/errors'
 import type { ParseCandidate, Point, Token } from '#src/interfaces'
 import { isParseCandidate } from '#tests/utils'
+import { tt } from '@flex-development/esast-util-from-code'
 import { chars } from '@flex-development/vfile-lexer'
 import testSubject from '../val'
 

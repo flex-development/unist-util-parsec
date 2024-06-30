@@ -1,52 +1,39 @@
 /**
- * @file Unit Tests - tok
- * @module unist-util-parsec/combinators/tests/unit/tok
+ * @file Unit Tests - eat
+ * @module unist-util-parsec/combinators/tests/unit/eat
  */
 
 import { ParseError } from '#src/errors'
-import type { ParseCandidate, Parser, Point, Token } from '#src/interfaces'
+import type { ParseCandidate, Parser, Token } from '#src/interfaces'
 import type { TokenType } from '#src/types'
 import { isParseCandidate } from '#tests/utils'
 import { tt } from '@flex-development/esast-util-from-code'
 import { chars } from '@flex-development/vfile-lexer'
-import testSubject from '../tok'
+import testSubject from '../eat'
 
-describe('unit:combinators/tok', () => {
+describe('unit:combinators/eat', () => {
   describe('parser', () => {
-    let end: Point
-    let start: Point
     let subject: Parser<TokenType, Token>
 
     beforeAll(() => {
-      end = { column: 10, line: 11, offset: 272 }
-      start = { column: 9, line: 11, offset: 271 }
-
-      subject = testSubject(tt.punctuator)
+      subject = testSubject()
     })
 
-    it('should fail on token type mismatch', () => {
-      // Arrange
-      const token: Token<tt.number> = {
-        end,
-        start,
-        type: tt.number,
-        value: chars.digit0
-      }
-
+    it('should fail on missing token', () => {
       // Act
-      const output = subject.parse(token)
+      const output = subject.parse()
 
       // Expect
       expect(output.successful).to.be.false
       expect(output.error).to.be.instanceof(ParseError)
-      expect(output.error).to.have.property('cause', token)
+      expect(output.error).to.have.property('cause', undefined)
     })
 
-    it('should succeed on token type match', () => {
+    it('should succeed with current token', () => {
       // Arrange
       const token: Token<tt.punctuator> = {
-        end,
-        start,
+        end: { column: 10, line: 11, offset: 272 },
+        start: { column: 9, line: 11, offset: 271 },
         type: tt.punctuator,
         value: chars.dot
       }

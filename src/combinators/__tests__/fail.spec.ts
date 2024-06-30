@@ -3,13 +3,13 @@
  * @module unist-util-parsec/combinators/tests/unit/fail
  */
 
-import tt from '#fixtures/tt'
 import { ParseError } from '#src/errors'
 import type {
   FailedParserOutput,
   Point,
   Token
 } from '#src/interfaces'
+import { tt } from '@flex-development/esast-util-from-code'
 import testSubject from '../fail'
 
 describe('unit:combinators/fail', () => {
