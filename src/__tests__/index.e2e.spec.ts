@@ -11,6 +11,7 @@ describe('e2e:unist-util-parsec', () => {
       'ParseError',
       'eat',
       'fail',
+      'match',
       'nok',
       'out',
       'succ',
