@@ -14,6 +14,8 @@ describe('e2e:unist-util-parsec', () => {
       'combine',
       'condition',
       'eat',
+      'err',
+      'errf',
       'fail',
       'match',
       'nok',

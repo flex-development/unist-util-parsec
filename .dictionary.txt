@@ -9,6 +9,7 @@ devlop
 docast
 dohm
 dprint
+errf
 esast
 fbca
 ggshield

@@ -9,7 +9,7 @@ import alt from './alt'
 import succ from './succ'
 
 /**
- * Optionally consume `x`.
+ * Optionally parse an occurrence of `x`.
  *
  * Equivalent to `x | nil<K>()`.
  *
