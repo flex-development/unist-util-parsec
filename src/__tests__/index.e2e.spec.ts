@@ -24,6 +24,8 @@ describe('e2e:unist-util-parsec', () => {
       'opt',
       'out',
       'range',
+      'rep',
+      'repn',
       'seq',
       'succ',
       'tok',

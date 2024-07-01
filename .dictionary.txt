@@ -27,6 +27,7 @@ nvmrc
 pathe
 pkgs
 preid
+repn
 shfmt
 succ
 unstub
