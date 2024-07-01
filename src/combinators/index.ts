@@ -4,6 +4,7 @@
  */
 
 export { default as alt } from './alt'
+export { default as condition } from './condition'
 export { default as eat } from './eat'
 export { default as fail } from './fail'
 export { default as match } from './match'
