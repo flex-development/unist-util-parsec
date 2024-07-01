@@ -79,6 +79,32 @@ class ParseError<T extends TokenType = TokenType> extends Error {
 
     Object.defineProperties(this, { range: { enumerable: false } })
   }
+
+  /**
+   * Get the better parse error between `e1` and `e2`.
+   *
+   * The better parse error is the one located furthest from the start point
+   * of a parsed source region.
+   *
+   * @public
+   * @static
+   *
+   * @param {(ParseError | null)?} e1 - First parse error
+   * @param {(ParseError | null)?} e2 - Second parse error
+   * @return {ParseError | null | undefined} Best parse error
+   */
+  public static best(
+    e1?: ParseError | null,
+    e2?: ParseError | null
+  ): ParseError | null | undefined {
+    if (!e1) return e2
+    if (!e2) return e1
+
+    if (!e1.range) return e1
+    if (!e2.range) return e2
+
+    return e1.range.start.offset < e2.range.start.offset ? e2 : e1
+  }
 }
 
 export default ParseError

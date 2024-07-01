@@ -9,10 +9,12 @@ describe('e2e:unist-util-parsec', () => {
   it('should expose public api', () => {
     expect(testSubject).to.have.keys([
       'ParseError',
+      'alt',
       'eat',
       'fail',
       'match',
       'nok',
+      'opt',
       'out',
       'succ',
       'tok',
