@@ -11,6 +11,7 @@ describe('e2e:unist-util-parsec', () => {
       'ParseError',
       'alt',
       'chk',
+      'combine',
       'condition',
       'eat',
       'fail',
@@ -18,6 +19,7 @@ describe('e2e:unist-util-parsec', () => {
       'nok',
       'opt',
       'out',
+      'seq',
       'succ',
       'tok',
       'val'

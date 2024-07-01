@@ -4,6 +4,7 @@
   "files": [
     "typings/@faker-js/faker/global.d.ts",
     "typings/@flex-development/unist-util-parsec/index.d.mts",
+    "typings/@flex-development/vfile-lexer/index.d.mts",
     "vitest-env.d.ts"
   ],
   "include": [
