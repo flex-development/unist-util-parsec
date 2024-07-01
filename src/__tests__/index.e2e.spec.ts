@@ -18,6 +18,7 @@ describe('e2e:unist-util-parsec', () => {
       'err',
       'errf',
       'fail',
+      'lazy',
       'match',
       'nok',
       'opt',
