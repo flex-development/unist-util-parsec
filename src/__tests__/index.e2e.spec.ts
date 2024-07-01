@@ -10,6 +10,7 @@ describe('e2e:unist-util-parsec', () => {
     expect(testSubject).to.have.keys([
       'ParseError',
       'alt',
+      'apply',
       'chk',
       'combine',
       'condition',
@@ -21,6 +22,7 @@ describe('e2e:unist-util-parsec', () => {
       'nok',
       'opt',
       'out',
+      'range',
       'seq',
       'succ',
       'tok',
