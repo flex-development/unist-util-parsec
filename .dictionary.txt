@@ -18,6 +18,10 @@ hmarr
 jchen
 kaisugi
 keyid
+kleft
+kmid
+kright
+ksides
 lcov
 lintstagedrc
 mkbuild
