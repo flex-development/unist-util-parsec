@@ -38,6 +38,7 @@ describe('e2e:unist-util-parsec', () => {
       'seq',
       'succ',
       'tok',
+      'until',
       'val'
     ])
   })
