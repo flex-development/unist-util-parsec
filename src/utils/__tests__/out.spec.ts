@@ -9,7 +9,7 @@ import type { TokenType } from '#src/types'
 import nok from '../nok'
 import testSubject from '../out'
 
-describe('utils:out', () => {
+describe('unit:utils/out', () => {
   it('should return failed parser output', () => {
     // Act
     const result = testSubject(false, null, nok())

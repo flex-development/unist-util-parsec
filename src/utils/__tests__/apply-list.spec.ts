@@ -5,7 +5,7 @@
 
 import testSubject from '../apply-list'
 
-describe('utils:applyList', () => {
+describe('unit:utils/applyList', () => {
   it('should return list result', () => {
     // Arrange
     const value: [number, number[]] = [faker.number.int(), [faker.number.int()]]

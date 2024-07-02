@@ -83,6 +83,7 @@
     "@faker-js/faker": "9.0.0-alpha.1",
     "@flex-development/commitlint-config": "1.0.1",
     "@flex-development/decorator-regex": "2.0.0",
+    "@flex-development/esast": "flex-development/esast#bc319cc4d5b14e2a55767bbd60ac2bfcb9ae40b2",
     "@flex-development/esast-util-from-code": "flex-development/esast-util-from-code#commit=680ec3009ea65a11eeec717b5e3cb8c64936dc8d",
     "@flex-development/esm-types": "2.0.0",
     "@flex-development/grease": "3.0.0-alpha.9",
@@ -146,6 +147,7 @@
     "yaml-eslint-parser": "1.2.3"
   },
   "resolutions": {
+    "@flex-development/esast": "flex-development/esast#bc319cc4d5b14e2a55767bbd60ac2bfcb9ae40b2",
     "chai": "5.1.1"
   },
   "engines": {

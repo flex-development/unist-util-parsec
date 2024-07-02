@@ -1531,15 +1531,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flex-development/esast@flex-development/esast#c27d63427454b617f92dc1f01a82f3344fca7dc4":
+"@flex-development/esast@flex-development/esast#bc319cc4d5b14e2a55767bbd60ac2bfcb9ae40b2":
   version: 1.0.0-alpha.5
-  resolution: "@flex-development/esast@https://github.com/flex-development/esast.git#commit=c27d63427454b617f92dc1f01a82f3344fca7dc4"
+  resolution: "@flex-development/esast@https://github.com/flex-development/esast.git#commit=bc319cc4d5b14e2a55767bbd60ac2bfcb9ae40b2"
   dependencies:
     "@flex-development/docast": "npm:1.0.0-alpha.17"
     "@flex-development/unist-util-types": "npm:1.4.0"
     "@types/mdast": "npm:4.0.3"
     "@types/unist": "npm:3.0.2"
-  checksum: 10/25ae4c7e99376f7f48e0992ffa333effbb886f8d248c89a69f0790e6cc97e9a186a72ea9379a4fdbde2dc5f764a45a8f94b00e2bc84562a2321d4b3eddaf8294
+  checksum: 10/698c10da68ad0a25cea8e51ec8a93650e2ac47738da881c10296795a15b3704473fddc1f60fe3ab4810dd7bf08c61918461237ef8c10902b98eea832622ead36
   languageName: node
   linkType: hard
 
@@ -1884,6 +1884,7 @@ __metadata:
     "@faker-js/faker": "npm:9.0.0-alpha.1"
     "@flex-development/commitlint-config": "npm:1.0.1"
     "@flex-development/decorator-regex": "npm:2.0.0"
+    "@flex-development/esast": "flex-development/esast#bc319cc4d5b14e2a55767bbd60ac2bfcb9ae40b2"
     "@flex-development/esast-util-from-code": "flex-development/esast-util-from-code#commit=680ec3009ea65a11eeec717b5e3cb8c64936dc8d"
     "@flex-development/esm-types": "npm:2.0.0"
     "@flex-development/grease": "npm:3.0.0-alpha.9"

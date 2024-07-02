@@ -25,6 +25,7 @@ ksides
 lcov
 lintstagedrc
 listn
+lrec
 mkbuild
 mlly
 nocheck

@@ -8,7 +8,7 @@ import type { Point, Token } from '#src/interfaces'
 import { tt } from '@flex-development/esast-util-from-code'
 import testSubject from '../nok'
 
-describe('utils:nok', () => {
+describe('unit:utils/nok', () => {
   it('should return parse error (no current token)', () => {
     // Act
     const result = testSubject(null)
