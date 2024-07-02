@@ -3,6 +3,7 @@
  * @module unist-util-parsec/interfaces
  */
 
+export type { default as ApplyNodeMap } from './apply-node-map'
 export type { default as ParseCandidate } from './parse-candidate'
 export type { default as Parser, default as Runner } from './parser'
 export type { default as FailedParser } from './parser-failed'

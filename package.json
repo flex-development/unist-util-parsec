@@ -71,6 +71,7 @@
     "typecheck:watch": "vitest --mode=typecheck --typecheck"
   },
   "dependencies": {
+    "@flex-development/unist-util-builder": "2.0.0",
     "@flex-development/unist-util-types": "1.6.1",
     "@types/unist": "3.0.2",
     "devlop": "1.1.0"
@@ -84,6 +85,7 @@
     "@flex-development/commitlint-config": "1.0.1",
     "@flex-development/decorator-regex": "2.0.0",
     "@flex-development/esast": "flex-development/esast#bc319cc4d5b14e2a55767bbd60ac2bfcb9ae40b2",
+    "@flex-development/esast-util-builder": "flex-development/esast-util-builder#commit=8faa3c385365e0562700ef67e6381c62a3bbe896",
     "@flex-development/esast-util-from-code": "flex-development/esast-util-from-code#commit=680ec3009ea65a11eeec717b5e3cb8c64936dc8d",
     "@flex-development/esm-types": "2.0.0",
     "@flex-development/grease": "3.0.0-alpha.9",
@@ -91,6 +93,7 @@
     "@flex-development/mlly": "1.0.0-alpha.18",
     "@flex-development/pathe": "2.0.0",
     "@flex-development/tutils": "6.0.0-alpha.25",
+    "@flex-development/unist-util-inspect": "1.0.0",
     "@flex-development/vfile-lexer": "flex-development/vfile-lexer#commit=a4837a7d1a9c63036ed522c0e844cd7c0ed78428",
     "@stylistic/eslint-plugin": "2.3.0",
     "@types/chai": "4.3.16",
@@ -142,12 +145,15 @@
     "ts-dedent": "2.2.0",
     "typescript": "5.5.2",
     "typescript-eslint": "8.0.0-alpha.34",
+    "vfile": "6.0.1",
     "vite-tsconfig-paths": "4.3.2",
     "vitest": "2.0.0-beta.12",
     "yaml-eslint-parser": "1.2.3"
   },
   "resolutions": {
     "@flex-development/esast": "flex-development/esast#bc319cc4d5b14e2a55767bbd60ac2bfcb9ae40b2",
+    "@flex-development/unist-util-builder": "2.0.0",
+    "@flex-development/unist-util-types": "1.6.1",
     "chai": "5.1.1"
   },
   "engines": {

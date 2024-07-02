@@ -12,7 +12,7 @@ import type {
 } from '#src/types'
 
 /**
- * Parse an occurrence of `x` and transform the result with `f`.
+ * Parse an occurrence of `x`, and transform the result with `f`.
  *
  * Fails if `x` fails.
  *

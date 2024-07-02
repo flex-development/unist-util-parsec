@@ -1,6 +1,6 @@
 /**
- * @file Test Utilities - isToken
- * @module tests/utils/isToken
+ * @file Utilities - isToken
+ * @module unist-util-parsec/utils/isToken
  */
 
 import type { Token } from '#src/interfaces'
@@ -11,26 +11,31 @@ import isPoint from './is-point'
  *
  * @see {@linkcode Token}
  *
- * @param {unknown?} [value] - Value to check
+ * @internal
+ *
+ * @param {unknown} value - Value to check
  * @return {value is Token} `true` if `value` is token
  */
-function isToken(value?: unknown): value is Token {
+function isToken(value: unknown): value is Token {
   return (
     check(value) &&
-    (value.next === undefined || check(value.next)) &&
-    (value.previous === undefined || check(value.previous))
+    (value.next === undefined || isToken(value.next)) &&
+    (
+      value.previous === undefined ||
+      isToken({ ...value.previous, next: undefined })
+    )
   )
 
   /**
-   * Check if the `value` is token like.
+   * Check if `value` is token like.
    *
-   * @param {unknown?} [value] - Value to check
+   * @param {unknown} value - Value to check
    * @return {value is Token} `true` if `value` is token like
    */
-  function check(value?: unknown): value is Token {
+  function check(value: unknown): value is Token {
     return (
-      value !== null &&
       typeof value === 'object' &&
+      value !== null &&
       'end' in value &&
       'type' in value &&
       'value' in value &&
@@ -38,7 +43,6 @@ function isToken(value?: unknown): value is Token {
       isPoint(value.end) &&
       isPoint(value.start) &&
       typeof value.type === 'string' &&
-      value.type.length > 0 &&
       (typeof value.value === 'string' || value.value === null)
     )
   }

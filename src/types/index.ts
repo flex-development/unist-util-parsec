@@ -4,9 +4,12 @@
  */
 
 export type { Offset } from '@flex-development/unist-util-types'
+export type { default as ApplyNode } from './apply-node'
+export type { default as Builder } from './builder'
 export type { default as ApplyCallback } from './callback-apply'
 export type { default as CombineCallback } from './callback-combine'
 export type { default as LrecCallback } from './callback-lrec'
+export type { default as InitChildren } from './init-children'
 export type { default as ListParser } from './parser-list'
 export type { default as ListNParser } from './parser-listn'
 export type { default as ParserOutput } from './parser-output'

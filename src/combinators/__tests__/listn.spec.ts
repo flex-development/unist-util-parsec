@@ -6,6 +6,7 @@
 import { ParseError } from '#src/errors'
 import type { Parser } from '#src/interfaces'
 import type { TokenType } from '#src/types'
+import type { PunctuatorToken } from '#tests/types'
 import { isParseCandidate } from '#tests/utils'
 import { Lexer, tt, type Token } from '@flex-development/esast-util-from-code'
 import { chars } from '@flex-development/vfile-lexer'
@@ -16,7 +17,7 @@ import val from '../val'
 describe('unit:combinators/listn', () => {
   describe('parser', () => {
     let x: Parser<TokenType, Token<tt.number>>
-    let s: Parser<TokenType, Token<tt.punctuator>>
+    let s: Parser<TokenType, PunctuatorToken>
 
     beforeAll(() => {
       x = tok(tt.number)

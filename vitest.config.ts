@@ -139,7 +139,8 @@ const config: UserConfigExport = defineConfig((env: ConfigEnv): UserConfig => {
           }
         }
       },
-      setupFiles: ['./__tests__/setup/index.ts'],
+      setupFiles: ['./__tests__/setup/chai.ts', './__tests__/setup/faker.ts'],
+      slowTestThreshold: 500,
       snapshotFormat: {
         callToJSON: true,
         min: false,

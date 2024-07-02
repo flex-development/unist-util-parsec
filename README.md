@@ -76,6 +76,7 @@ This package is fully typed with [TypeScript][typescript].
 
 ## Related
 
+- [`unist-util-builder`][unist-util-builder] &mdash; [unist][unist] utility to build trees
 - [`unist-util-types`][unist-util-types] &mdash; [unist][unist] utility types
 - [`vfile-lexer`][vfile-lexer] &mdash; [vfile][vfile] utility to tokenize a file
 
@@ -89,6 +90,7 @@ community you agree to abide by its terms.
 [esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 [esmsh]: https://esm.sh/
 [typescript]: https://www.typescriptlang.org
+[unist-util-builder]: https://github.com/flex-development/unist-util-builder
 [unist-util-types]: https://github.com/flex-development/unist-util-types
 [unist]: https://github.com/syntax-tree/unist
 [vfile-lexer]: https://github.com/flex-development/vfile-lexer

@@ -6,6 +6,7 @@
 import { ParseError } from '#src/errors'
 import type { ParseCandidate, Parser, Point, Token } from '#src/interfaces'
 import type { TokenType } from '#src/types'
+import type { PunctuatorToken } from '#tests/types'
 import { isParseCandidate } from '#tests/utils'
 import { tt } from '@flex-development/esast-util-from-code'
 import { chars } from '@flex-development/vfile-lexer'
@@ -44,7 +45,7 @@ describe('unit:combinators/tok', () => {
 
     it('should succeed on token type match', () => {
       // Arrange
-      const token: Token<tt.punctuator> = {
+      const token: PunctuatorToken = {
         end,
         start,
         type: tt.punctuator,

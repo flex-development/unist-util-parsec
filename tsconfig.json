@@ -53,7 +53,12 @@
     "useUnknownInCatchVariables": true,
     "verbatimModuleSyntax": true
   },
-  "exclude": ["**/coverage", "**/dist", "**/node_modules"],
+  "exclude": [
+    "**/coverage",
+    "**/dist",
+    "**/node_modules",
+    "**/tsconfig*temp.json"
+  ],
   "include": [
     "**/**/*.json",
     "**/**/*.mjs",

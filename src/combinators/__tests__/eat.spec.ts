@@ -6,6 +6,7 @@
 import { ParseError } from '#src/errors'
 import type { ParseCandidate, Parser, Token } from '#src/interfaces'
 import type { TokenType } from '#src/types'
+import type { PunctuatorToken } from '#tests/types'
 import { isParseCandidate } from '#tests/utils'
 import { tt } from '@flex-development/esast-util-from-code'
 import { chars } from '@flex-development/vfile-lexer'
@@ -31,7 +32,7 @@ describe('unit:combinators/eat', () => {
 
     it('should succeed with current token', () => {
       // Arrange
-      const token: Token<tt.punctuator> = {
+      const token: PunctuatorToken = {
         end: { column: 10, line: 11, offset: 272 },
         start: { column: 9, line: 11, offset: 271 },
         type: tt.punctuator,

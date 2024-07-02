@@ -4,7 +4,7 @@
  */
 
 import type { ParseCandidate, Point } from '#src/interfaces'
-import isToken from './is-token'
+import isToken from '#src/utils/is-token'
 
 /**
  * Check if the specified `value` is a parse candidate.

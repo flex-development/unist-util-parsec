@@ -91,3 +91,5 @@ ignore:
 profiling:
   critical_files_paths:
     - src/combinators/*.ts
+    - src/utils/apply-position.ts
+    - src/utils/out.ts
