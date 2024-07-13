@@ -23,9 +23,9 @@ class ParseError<T extends TokenType = TokenType> extends Error {
    * @public
    * @override
    * @instance
-   * @member {Readonly<Token<T>> | null | undefined} [cause]
+   * @member {Token<T> | null | undefined} [cause]
    */
-  public override cause: Readonly<Token<T>> | null | undefined
+  public override cause: Token<T> | null | undefined
 
   /**
    * Reason for error.
@@ -73,7 +73,7 @@ class ParseError<T extends TokenType = TokenType> extends Error {
     this.name = 'ParseError'
 
     if (token) {
-      this.cause = Object.freeze(token)
+      this.cause = token
       this.range = { end: this.cause.end, start: this.cause.start }
     }
 

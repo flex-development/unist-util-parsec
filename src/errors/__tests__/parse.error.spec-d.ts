@@ -12,11 +12,11 @@ describe('unit-d:errors/ParseError', () => {
     expectTypeOf<TestSubject>().toMatchTypeOf<Error>()
   })
 
-  it('should match [cause: Readonly<Token<T>> | null | undefined]', () => {
+  it('should match [cause: Token<T> | null | undefined]', () => {
     expectTypeOf<RequiredKeys<TestSubject>>().extract<'cause'>().not.toBeNever()
     expectTypeOf<TestSubject>()
       .toHaveProperty('cause')
-      .toEqualTypeOf<Nilable<Readonly<Token>>>
+      .toEqualTypeOf<Nilable<Token>>
   })
 
   it('should match [range: Position | null | undefined]', () => {

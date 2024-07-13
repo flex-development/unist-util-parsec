@@ -17,7 +17,7 @@ describe('unit:errors/ParseError', () => {
 
   describe('constructor', () => {
     it('should set #cause', () => {
-      expect(subject).to.have.property('cause', eof).and.be.frozen
+      expect(subject).to.have.property('cause', eof)
     })
 
     it('should set #message', () => {
