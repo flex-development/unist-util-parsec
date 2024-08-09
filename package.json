@@ -146,7 +146,7 @@
     "typescript": "5.5.2",
     "typescript-eslint": "8.0.1",
     "vfile": "6.0.2",
-    "vite-tsconfig-paths": "5.0.0",
+    "vite-tsconfig-paths": "5.0.1",
     "vitest": "2.0.5",
     "yaml-eslint-parser": "1.2.3"
   },
