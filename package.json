@@ -81,7 +81,7 @@
     "@commitlint/cli": "19.5.0",
     "@commitlint/types": "19.5.0",
     "@eslint/js": "9.11.1",
-    "@faker-js/faker": "9.0.2",
+    "@faker-js/faker": "9.0.3",
     "@flex-development/commitlint-config": "1.0.1",
     "@flex-development/decorator-regex": "2.0.0",
     "@flex-development/esast": "flex-development/esast#bc319cc4d5b14e2a55767bbd60ac2bfcb9ae40b2",
